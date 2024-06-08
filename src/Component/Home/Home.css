@@ -1,0 +1,75 @@
+.Home {
+    padding-top: 10rem;
+    text-align: center;
+    gap: 2rem;
+    flex-direction: column;
+}
+
+.maintext {
+    color: var(--blackColor);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 2.5rem;
+}
+
+.maintext h2{
+    font-size: 2rem;
+}
+
+
+.homeImages {
+    width: 100%;
+    margin: 1rem auto 0;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 5rem;
+}
+
+.videoDiv {
+    width: 90%;
+    position: relative;
+}
+
+.video {
+    width: 50%;
+    height: 290px;
+    border-radius: 10rem;
+    object-fit: cover; /* Ensures the video covers the container */
+    z-index: 1;
+}
+
+.plane {
+    position: absolute;
+    top: 53%; /* Adjust to position the plane vertically centered */
+    left: 50%; /* Adjust to position the plane horizontally centered */
+    transform: translate(-60%, -60%) rotateY(220deg); /* Center and rotate the plane */
+    width: 40%; /* Adjust size as needed */
+    z-index: 2; /* Ensure the plane is above the video */
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .homeImages{
+        margin: 0.1rem auto 0;
+    }
+    .video {
+        width: 80%;
+        height: 110px;
+        border-radius: 10rem;
+        object-fit: cover; /* Ensures the video covers the container */
+        z-index: 1;
+    }
+    
+    .plane {
+        position: absolute;
+        top: 65%; /* Adjust to position the plane vertically centered */
+        left: 50%; /* Adjust to position the plane horizontally centered */
+        transform: translate(-60%, -60%) rotateY(220deg); /* Center and rotate the plane */
+        width: 70%; /* Adjust size as needed */
+        z-index: 2; /* Ensure the plane is above the video */
+    }
+
+}
+

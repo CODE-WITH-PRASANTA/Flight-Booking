@@ -1,0 +1,159 @@
+.Travellers .sectionContainer {
+    text-align: center;
+}
+
+.Travellers{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Travellers .travellersContainer {
+    margin-top: 1rem;
+    gap: 3.5rem;
+}
+
+.Travellers .singleTraveller {
+    position: relative;
+    height: 280px;
+    width: 35%;
+    max-width: 250px;
+    overflow: hidden;
+    border-radius: 5rem;
+    margin: auto;
+}
+
+.travellersContainer{
+    display: flex;
+    flex-direction: row;
+}
+
+.Travellers .destinationImage,
+.Travellers .travellerImage,
+.Travellers .travellerName {
+    position: absolute;
+}
+
+.Travellers .destinationImage {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    object-fit: cover;
+}
+
+.Travellers .travellerImage {
+    height: 65px;
+    width: 65px;
+    object-fit: cover;
+    border-radius: 50%;
+    bottom: 30px;
+    left: 38%;
+    transform: translateX(-50%);
+    border: 5px solid rgba(223, 223, 223, 0.637);
+    animation: animated 2.3s infinite;
+}
+
+@keyframes animated {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(8px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.Travellers .travellerName {
+    bottom:-100%;
+    width: 100%;
+    height: max-content;
+    background: white;
+    padding: 1.5rem 1rem;
+    transition: var(--transition);
+    animation: animatedBorders 2.3s infinite;
+    
+}
+
+.Travellers .travellerName span {
+    display: block;
+    color: black;
+    font-weight: 700;
+}
+
+.Travellers .travellerName p {
+    color: var(--PrimaryColor);
+    font-style: italic;
+}
+
+@keyframes animatedBorders {
+    0% {
+        border-radius: 0rem;
+    }
+    50% {
+        border-radius: 2rem;
+    }
+    100% {
+        border-radius: 0rem;
+    }
+    
+}
+
+.Travellers .singleTraveller:hover .travellerName {
+    bottom: 0;
+    transition: 1s ease-in-out;
+}
+
+.Travellers .singleTraveller:hover .travellerImage {
+    bottom: 110px;
+    transition: 1s ease-in-out;
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+    .Travellers .travellersContainer {
+        gap: 1.5rem;
+    }
+    .travellersContainer {
+        flex-direction: column;
+    }
+
+    .Travellers .singleTraveller {
+        width: 80%;
+        margin: auto;
+    }
+
+    .destinationImage,
+    .travellerImage,
+    .travellerName {
+        position: relative;
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+
+    .travellerImage {
+        margin-top: 1rem;
+    }
+
+    .travellerName {
+        position: static;
+        margin-top: 0.5rem;
+        padding: 1rem;
+    }
+
+    .travellerName span {
+        font-size: 1.2rem;
+    }
+
+    .travellerName p {
+        font-size: 1rem;
+    }
+}
+

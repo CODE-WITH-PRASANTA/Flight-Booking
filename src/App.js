@@ -5,7 +5,7 @@ import Search from './Component/Search/Search';
 import Support from './Component/Support/Support';
 import Info from './Component/Info/Info';
 import Longe from './Component/Longe/Longe';
-// import Travellers from './Component/Travellers/Travellers';
+import Travellers from './Component/Travellers/Travellers';
 // import Subscribers from './Component/Subscribers/Subscribers';
 // import Footer from './Component/Footer/Footer';
 
@@ -18,8 +18,8 @@ function App() {
     <Support />
     <Info />
     <Longe />
-    {/* <Travellers />
-    <Subscribers />
+    <Travellers />
+    {/* <Subscribers />
     <Footer /> */}
     </>
   );

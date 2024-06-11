@@ -17,10 +17,10 @@
     --whiteColor: hsl(0, 0, 100%);
     --blackColor: hsl(0, 0, 12%);
     --textColor: hsl(240, 1%, 48%);
-    --borderColor: hsl(0, 0, 83%);
+    --borderColor: hsl(0, 5%, 18%);
     --whiteColorDeam: hsl(0, 0, 93%);
     --greyBg: hsl(0, 0, 96%);
-    --greyText: hsl(145, 145, 145);
+    --greyText: rgb(145, 145, 145);
     --inputColor: hsl(330, 12%, 97%);
     --boxShadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.5) 0px 4px 6px -2px;
     --transition: .4s ease-in-out;

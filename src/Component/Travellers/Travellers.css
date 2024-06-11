@@ -114,18 +114,18 @@
 }
 
 
-
 @media screen and (max-width: 768px) {
 
     .Travellers .travellersContainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         gap: 1.5rem;
-    }
-    .travellersContainer {
-        flex-direction: column;
+        margin-top: 0; 
     }
 
     .Travellers .singleTraveller {
-        width: 80%;
+        width: 100%;
+        height: 200px;
         margin: auto;
     }
 
@@ -155,5 +155,18 @@
     .travellerName p {
         font-size: 1rem;
     }
-}
 
+    .Travellers .travellerImage{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    bottom: 30px;
+    left: 35%;
+    }
+
+        
+    .Travellers .singleTraveller {
+    max-width: 300px;
+    width: 100%;
+    }
+}

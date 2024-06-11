@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import '../Travellers/Travellers.css'
 import parisImg from '../../Asserts/Paris.jpg'
 import Traveller from '../../Asserts/Traveller1.jpg'
@@ -8,21 +8,24 @@ import Traveller4 from '../../Asserts/Traveller4.jpg'
 import dubaiImg from '../../Asserts/Dubai.jpg'
 import japanImg from '../../Asserts/Japan.jpg'
 import newyorkImg from '../../Asserts/NewYork.jpg'
-
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 const Travellers = () => {
+    useEffect(() => {
+        Aos.init({ duration: 2000 })
+    }, [])
     return (
         <div className='Travellers container section'>
 
 
             <div className="sectionContainer">
-                <h2>Top travelers of the month!</h2>
+                <h2 data-aos='fade-down' data-aos-duration='2500'>Top travelers of the month!</h2>
 
                 <div className="travellersContainer grid">
-                    {/* Single Passenger */}
 
 
-                    <div className="singleTraveller">
+                    <div data-aos='fade-up' data-aos-duration='2500' className="singleTraveller">
                         <img src={parisImg} className='destinationImage' alt="" />
                         <div className="travellersDetail">
                             <div className="travellersPicture">
@@ -36,7 +39,7 @@ const Travellers = () => {
                     </div>
 
 
-                    <div className="singleTraveller">
+                    <div data-aos='fade-up' data-aos-duration='2500' className="singleTraveller">
                         <img src={dubaiImg} className='destinationImage' alt="" />
                         <div className="travellersDetail">
                             <div className="travellersPicture">
@@ -50,7 +53,7 @@ const Travellers = () => {
                     </div>
 
 
-                    <div className="singleTraveller">
+                    <div data-aos='fade-up' data-aos-duration='2500' className="singleTraveller">
                         <img src={newyorkImg} className='destinationImage' alt="" />
                         <div className="travellersDetail">
                             <div className="travellersPicture">
@@ -65,7 +68,7 @@ const Travellers = () => {
 
 
 
-                    <div className="singleTraveller">
+                    <div data-aos='fade-up' data-aos-duration='2500' className="singleTraveller">
                         <img src={japanImg} className='destinationImage' alt="" />
                         <div className="travellersDetail">
                             <div className="travellersPicture">

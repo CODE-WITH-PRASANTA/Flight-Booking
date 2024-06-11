@@ -1,0 +1,139 @@
+.Footer {
+    background: var(--SecondaryColor);
+}
+
+.sectioncontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* gap: 2.5rem; */
+    max-width: 90%;
+    
+}
+
+.gridOne {
+   margin-left: 6rem;
+}
+
+.Footerparts{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* justify-content: space-between; */
+    max-width: 100%;
+    width: 100%;
+    gap: 18rem;
+}
+
+.logoDiv {
+    /* max-width: 24%; */
+    margin: auto;
+    .logo2{
+        width: 20%;
+    }
+}
+
+.socialIcon{
+    margin-top: 1rem;
+    gap: 1rem;
+
+    .icon{
+        height: 50px;
+        width: 30px;
+        border-radius: 10rem;
+        border: 1px solid var(--borderColor);
+        box-shadow: var(--boxShadow);
+        padding: .4rem;
+        color: var(--greyText);
+
+        &:hover{
+            background: var(--PrimaryColor);
+            transform: translateY(-7px);
+            transition: var(--transition);
+            border: 1px solid var(--PrimaryColor);
+            color: white;
+        }
+    }
+}
+
+
+.footerlinks{
+    display: grid;
+
+    .linkTitle{
+        color: var(--blackColor);
+        font-weight: 500;
+        display: block;
+        padding-bottom: 1rem;
+    }
+
+    li a{
+        display: block;
+        color: var(--greyText);
+        transition: var(--transition);
+        margin-top: 1rem;
+
+
+        &:hover{
+            transform: translateX(7px);
+            color: var(--PrimaryColor);
+        }
+    }
+}
+
+.copyRightDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 3rem;
+    margin-left: 5rem;
+    
+    p{
+        font-size: 1rem;
+        color: var(--PrimaryColor);
+    }
+}
+
+
+@media screen and (max-width:768px) {
+    .sectioncontainer{
+        flex-direction: column;
+        margin-left: 2.5rem;
+    }
+
+    .Footerparts{
+        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        margin-top: 2rem;
+        gap: 2rem;
+    }
+
+
+    .footerlinks{
+        li a{
+            margin-top: .5rem;
+        }
+    }
+
+    .gridOne{
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .copyRightDiv{
+        margin-left: 0;
+        margin-top: 1.2rem;
+    }
+
+    .logoDiv{
+        margin-left: 2rem;
+    }
+
+    .logoDiv .logo2{
+        margin-left: 4rem;
+    }
+}

@@ -1,15 +1,24 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { RiAccountPinCircleLine } from "react-icons/ri";
 import { RxCalendar } from "react-icons/rx";
 import '../Search/Search.css'
 
+import Aos from 'aos'
+import 'aos/dist/aos.css'
+
+
 
 const Search = () => {
+
+    useEffect(() => {
+        Aos.init({ duration: 2000 })
+    }, [])
+
     return (
         <div className='Search container section'>
 
-            <div className="sectionContainer grid">
+            <div data-aos='fade-up' data-aos-duration='2500' className="sectionContainer grid">
                 <div className="btns flex">
                     <div className="singlebtn">
                         <span>Economy</span>
@@ -24,7 +33,7 @@ const Search = () => {
                     </div>
                 </div>
 
-                <div className="allSection flex">
+                <div data-aos='fade-down' data-aos-duration='2500' className="allSection flex">
                     {/* Single Input */}
                     <div className="searchInput flex">
                         <div className="singleInput flex">

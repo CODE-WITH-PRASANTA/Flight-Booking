@@ -1,19 +1,25 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import '../Info/Info.css'
 import { RxCalendar } from "react-icons/rx";
 import { BsShieldCheck } from "react-icons/bs";
 import { BsBookmarkCheck } from "react-icons/bs";
-
+import Aos from 'aos';
+import 'aos/dist/aos.css'
 
 const Info = () => {
+
+    useEffect(() => {
+        Aos.init({ duration: 2000 })
+    }, [])
+
     return (
         <div className='Info section'>
             <div className="infoContainer container">
 
 
                 <div className="tittleDiv flex">
-                    <h3>Travel to make memories all <br />around the world....</h3>
-                    <button className='btn'>
+                    <h3 data-aos='fade-right' data-aos-duration='2500'>Travel to make memories all <br />around the world....</h3>
+                    <button data-aos='fade-left' data-aos-duration='2500' className='btn'>
                         View All
                     </button>
                 </div>
@@ -21,7 +27,7 @@ const Info = () => {
 
                 <div className="cardsDiv grid">
 
-                    <div className="singleCard grid">
+                    <div data-aos='fade-up' data-aos-duration='2500' className="singleCard grid">
                         <div className="iconDiv flex">
                             <RxCalendar className='iconx' />
                         </div>
@@ -33,7 +39,7 @@ const Info = () => {
 
                     {/* 2nd */}
 
-                    <div className="singleCard grid">
+                    <div data-aos='fade-up' data-aos-duration='3500' className="singleCard grid">
                         <div className="iconDiv flex colorOne">
                             <BsShieldCheck className='iconx ' />
                         </div>
@@ -45,7 +51,7 @@ const Info = () => {
 
 
                     {/* 3rd */}
-                    <div className="singleCard grid">
+                    <div data-aos='fade-up' data-aos-duration='4500' className="singleCard grid">
                         <div className="iconDiv flex colorTwo">
                             <BsBookmarkCheck className='iconx' />
                         </div>

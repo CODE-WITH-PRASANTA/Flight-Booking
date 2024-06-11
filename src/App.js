@@ -6,8 +6,8 @@ import Support from './Component/Support/Support';
 import Info from './Component/Info/Info';
 import Longe from './Component/Longe/Longe';
 import Travellers from './Component/Travellers/Travellers';
-// import Subscribers from './Component/Subscribers/Subscribers';
-// import Footer from './Component/Footer/Footer';
+import Subscribers from './Component/Subscribers/Subscribers';
+import Footer from './Component/Footer/Footer';
 
 function App() {
   return (
@@ -19,8 +19,8 @@ function App() {
     <Info />
     <Longe />
     <Travellers />
-    {/* <Subscribers />
-    <Footer /> */}
+    <Subscribers />
+    <Footer />
     </>
   );
 }
